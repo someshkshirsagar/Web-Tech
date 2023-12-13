@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        .container{
+            width: 700px;
+            height: 700px;
+            display: grid;
+            grid-template-columns: auto auto;
+            border: 3px solid rgb(0, 0, 0);
+            margin: 200px 350px;
+            place-items: center;
+            box-shadow: 10px 10px gray;
+            transition: width 3s, height 3s;
+        }
+        .container:hover{
+            background-color: aqua;
+            cursor: pointer;
+            width: 500px;
+            height: 500px;
+        }
+        .grid-item{
+            margin:20px
+        }
+        .flex{
+            display: flex;
+            border: 2px solid red;
+            /* justify-content: space-between; */
+            width: 200px;
+        }
+        .box1{
+            /* border: 2px solid black; */
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+            margin :20px
+        }
+        .circle{
+            background-color:black;
+            width: 100px;
+            height: 100px;
+            /* border-radius: 50%; */
+            /* transition: all 3s ease-in-out 1s;
+            */
+
+        }
+        .circle:hover{
+            animation-name: sumat;
+  animation-duration: 4s;
+            /* width: 400px;
+            height: 400px; */
+            /* background-color: yellow; */
+        }
+        @keyframes sumat{
+            0%{
+                width: 150px;
+            height: 150px;
+            background-color: yellow;
+            transform: rotate(20deg);
+            }
+            25%{
+                width: 200px;
+            height: 200px;
+            background-color: yellow; 
+            transform: rotate(20deg);
+            }
+            50%{
+                width: 250px;
+            height:250px;
+            background-color: rgb(47, 0, 255); 
+            transform: rotate(20deg);
+            }
+            100%{
+                width: 300px;
+            height: 300px;
+            background-color: rgb(0, 223, 175);
+            transform: rotate(20deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle">
+
+    </div>
+    <div class="container">
+        <div class="grid-item" style="font-weight: bold;">Name</div>
+        <div class="grid-item" style="font-weight: bold;">City</div>
+        <div class="grid-item">JOJO</div>
+        <div class="grid-item">Delhi</div>
+        <div class="grid-item">Sumat</div>
+        <div class="grid-item">Nashik</div>
+        <div class="grid-item">Somesh</div>
+        <div class="grid-item">Kalyan</div>
+        <div class="grid-item">Sameer</div>
+        <div class="grid-item">Vikhroli</div>
+    </div>
+    
+   
+</body>
+</html>

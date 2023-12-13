@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class person{
+            personName;
+            constructor(pname){
+                this.personName=pname;
+            }
+        }
+        class employee extends person{
+            lname;
+            constructor(fname, lname){
+                super(fname);
+                this.lname=lname;
+            }
+            printData() {
+            
+               console.log( this.personName+" " +this.lname);
+                
+            }
+        
+           
+        }
+       function  Fun() {
+        
+            const emp1=new employee("Somesh","Kshirsagar")
+              emp1.printData();
+                
+            }
+        
+    </script>
+</head>
+<body>
+    <span>Enter Name</span>
+    <br><input type="text" name="" id="txtName">
+    <br><input type="button" value="Display" id="" onclick="Fun();">
+</body>
+</html>

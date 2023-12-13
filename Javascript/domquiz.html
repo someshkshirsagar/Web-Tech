@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function addElem(){
+        // Create element:
+        var x= document.getElementById("elem").value;
+        var elem = document.createElement(x);
+        var msg=prompt("Enter Details")
+        elem.innerText = msg;
+        
+        // Append to body:
+        document.body.appendChild(elem);
+        }
+        </script>
+</head>
+<body>
+    DOM Quiz
+    <p>What HTML would you like to add?</p>
+    <form action="">
+    <select  id="elem">
+        <option value="h1">H1 Element</option>
+        <option value="img">Image Tag</option>
+        <option value="p">Paragraph</option>
+    </select>
+    <button type="button" onclick="addElem();">Add Element</button>
+    <p id="demo"></p>
+</form>
+
+
+</body>
+</html>

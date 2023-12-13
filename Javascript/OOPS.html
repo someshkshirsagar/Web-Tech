@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+            personName;
+            constructor(pname){
+                this.personName=pname;
+            }
+            displayPersonName(){
+                console.log(this.personName);
+            }
+        }
+
+        function Fun(){
+            const pObject = new Person(document.etElementById("txtName").value);
+            pObject.displayPersonName();
+        }
+
+    </script>
+</head>
+<body>
+    <span>Enter Name</span>
+    <br><input type="text" name="" id="txtName">
+    <br><input type="button" value="Display" id="" onclick="Fun();">
+</body>
+</html>

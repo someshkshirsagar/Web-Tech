@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var ename,age;
+    function saveData(){
+        ename=document.getElementById("txtname").value;
+        localStorage.setItem("empname", ename);
+        alert("Name is Stored");
+
+        document.getElementById("txtname").value="";
+        document.getElementById("txtname").focus();
+    }
+    function showData(){
+        var spanObject=document.getElementById("result");
+        
+        spanObject.innerText="Name is " + ename;
+    }
+   console.log(localStorage.getItem("empname"))
+
+    
+    // function saveAge(){
+
+    // }
+
+</script>
+<body>
+    <h1>WELCOME</h1>
+<p >Enter Name</p>
+    <input type="text" id="txtname" placeholder="Enter Name">
+    <input type="button" value="Save data" onclick="saveData()">  
+    <input type="button" value="Show Data" onclick="showData()">
+    <br>
+    <br>
+    <input type="text" id="age" placeholder="Enter Age">
+    <span id="result"> </span>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AUTOMOBILES</title>
+<style>
+ .blue{
+    color:blue;
+    
+
+ }
+ .red{
+    color:red;
+
+ }
+ .green{
+    color:green;
+
+ }
+ .hidden{
+    display: none;
+ }
+ .active{
+    display: block;
+ }
+ #eligible{
+    color:green
+ }
+ #not-eligible{
+    color: red;
+ }
+</style>
+<script>
+
+function changeColor(){
+    var headingObj = document.getElementById("heading1");
+    // // headingObj.style.color="green";
+    
+    var temp=document.getElementById("selectedColor").value;
+    headingObj.className=temp;
+}
+function validateAge(){
+ var age = document.getElementById("ageInput").value;
+ if(age===""){
+alert("Age Cannot Be Blank");
+ }
+
+ else if(age>=25 && age<=80){
+    var elem = document.getElementById("not-eligible").className="hidden";
+   var elem = document.getElementById("eligible").className="active";
+
+ }
+ else if(age<25 ||age>80){
+    alert("Age Must Be Between 25 and 80")
+    // var elem = document.getElementById("eligible").className="hidden";
+    // var elem = document.getElementById("not-eligible").className="active";
+ }
+//  else{
+//     alert("Age Must Be Between 25 and 80")
+//  }
+ 
+}
+</script>
+
+</head>
+
+<body>
+    <h1 id="heading1">Hello Welcome</h1>
+    <br>
+    <select name="" id="selectedColor">
+        <option style="color: red;" value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+    </select>
+    <button type="button" value="Change Colour" onclick="changeColor();">
+        Change Colour of H1 tag
+    </button>
+<br><br><br>
+    <div>
+        <span>Enter Your Age:</span>
+        <input type="text" id="ageInput">
+        <input type="button" value="Validate" onclick="validateAge();">
+        <p class="hidden" id="eligible">You are elgible</p>
+        <p class="hidden" id="not-eligible">You are Not elgible</p>
+    </div>
+</body>
+
+</html>

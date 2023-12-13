@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script>
+     
+           
+        // function demoFun(){
+        //     var arr=["Somesh","Sumat","Krunal","Sameer"];
+        //     var result="";
+        //     for(var i=0;i<arrlength;i++){
+               
+        //         result=result+arr[i]+" "+"<br>";
+        //     }
+         
+        //     document.getElementById("div1").innerHTML=result;
+
+        // }
+
+        var allNames=[];
+        var arrayLength=allNames.length;
+        console.log(arrayLength);
+        for(var i=0;i<arrayLength;i++){
+            console.log('Value Present in' + i+"th index is:"+allNames[i]);
+        }
+    var ename = "Sumat";
+    allNames.push(ename);
+
+    console.log(arrayLength);
+        for(var i=0; i<arrayLength;i++){
+            console.log("Value present in "+ i +"the index is : " + allNames[i]);
+
+        }
+        ename = allNames.pop();
+
+        console.log("Name deleted is: "+ ename);
+        console.log(arrayLength);
+            for(var i=0; i<arrayLength; i++){
+                console.log("Value present is: "+i+ "th index is :" + allNames[i]);
+            }
+
+    ename ="Jojo";
+    var searchstatus = false;
+            for(var i=0; i<arrayLength; i++){
+
+            }
+            
+            function PrintName(name){
+                console.log(name);
+            }
+            var allElem=["Somesh","Sumat","Sameer","Krunal"]
+            allElem.forEach(PrintName);
+    </script>
+</head>
+<body>
+    <h1>Arrays</h1>
+    <input type="button" name="" id="" value="Show" onclick="demoFun()">
+    <div id="div1"></div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <script>
+        var operator;
+        var textValue1;
+
+        function pressValue(num){
+            // alert("Hello");
+    var textValue=document.getElementById('textNumberBar').value
+  textValue=textValue+num;
+  document.getElementById('textNumberBar').value=textValue
+
+
+}
+
+function selectOperator(selectedOperator){
+      operator=selectedOperator;
+      textValue1=document.getElementById("textNumberBar").value;
+      document.getElementById("textNumberBar").value="";
+
+
+}
+function fetchResult(){
+    var textValue2=document.getElementById("textNumberBar").value;
+    var result=0;
+    if(operator==="+"){
+        result=Number(textValue1)+Number(textValue2);
+    }
+    else if(operator==="-"){
+        result=Number(textValue1)-Number(textValue2);
+    }
+    else if(operator==="/"){
+        result=Number(textValue1)/Number(textValue2);
+    } 
+    else{
+        result=Number(textValue1)*Number(textValue2);
+    }
+    document.getElementById("textNumberBar").value=result;
+   
+}
+
+function clearData(){
+    operator="";
+    textValue1=0;
+    document.getElementById("textNumberBar").value="";
+  
+}
+    </script>
+</head>
+<body>
+    <input type="text" id="textNumberBar">
+    <br><br><br>
+    <input id="num1"type="button" value="1" onclick="pressValue(document.getElementById('num1').value);"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="num2"type="button" value="2" onclick="pressValue(document.getElementById('num2').value);"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="num3"type="button" value="3" onclick="pressValue(document.getElementById('num3').value);"/>
+    <br>
+    <br>
+    <br>
+   
+    <input id="num4"type="button" value="4" onclick="pressValue(document.getElementById('num4').value);"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="num5"type="button" value="5" onclick="pressValue(document.getElementById('num5').value);"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="num6"type="button" value="6" onclick="pressValue(document.getElementById('num6').value);"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br>
+    <br>
+    <br>
+   
+    <input id="num7"type="button" value="7" onclick="pressValue(document.getElementById('num7').value);"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="num8"type="button" value="8" onclick="pressValue(document.getElementById('num8').value);"/>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <input id="num9"type="button" value="9" onclick="pressValue(document.getElementById('num9').value);"/>
+    <br><br><br>
+    <input id="num0"type="button" value="0" onclick="pressValue(document.getElementById('num0').value);"/>
+    <br><br><br>
+    
+    <button value="+" id="op1" onclick="selectOperator(document.getElementById('op1').value);">+</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button value="-" id="op2" onclick="selectOperator(document.getElementById('op2').value);">-</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button value="*" id="op3" onclick="selectOperator(document.getElementById('op3').value);">*</button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button value="/" id="op4" onclick="selectOperator(document.getElementById('op4').value);">/</button>
+<br><br>
+
+    <button value="="  onclick="fetchResult();">=</button>
+    <button  onclick="clearData();">Clear</button>
+
+
+    <!-- <script src="./script.js"></script> -->
+</body>
+</html>

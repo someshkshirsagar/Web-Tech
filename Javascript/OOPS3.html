@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class employee{
+            empName;
+            constructor (empName){
+                this.empName=empName;
+            }
+            showEmplpoyeeDetails(){
+                return this.empName;
+            }
+            
+        }
+        class company{
+            companyName;
+            empObject;
+            constructor (empElement, companyName){
+                this.empObject=empElement;
+                this.companyName=companyName;
+            }
+            printCompanyDetails(){
+                var msg=this.empObject.showEmplpoyeeDetails()+" works for "+this.companyName;
+                return msg;
+            }
+        }
+        const Fun=function(){
+            let empItem = new employee ("Sumat Jain");
+            let compItem = new company(empItem, " Party House");
+            let msg = compItem.printCompanyDetails();
+            console.log(msg);
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Display Content" onclick="Fun()">
+</body>
+</html>

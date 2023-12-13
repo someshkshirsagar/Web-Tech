@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        p{
+            margin:0px;
+        }
+        .cars-section{
+            /* background-color: yellow; */
+            display: flex;
+            justify-content: space-between;
+            
+            padding: 10px;
+            border-radius: 10px;
+            
+        }
+        .image-container{
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            /* border: 2px solid black; */
+            border-radius: 10px;
+            margin: 0px 100px 0px 0px;
+        }
+        img{
+            border-radius: 10px 10px 0px 0px;
+            height: 100%;
+            width: 100%;
+        }
+        img:hover{
+            cursor: pointer;
+            opacity: 50%;
+        }
+        .image{
+         height: 300px;
+         width: 300px;
+      
+        }
+
+        .cars-data{
+            background-color: green;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            border-radius: 0px 0px 10px 10px;
+ 
+ flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <h1>Cars Website</h1>
+
+    <div class="cars-section">
+    <div class="image-container">
+        <div class="image">
+            <img src="./images/aston.jfif" alt="">
+        </div>
+ 
+    <div class="cars-data">
+       <p>Aston Martin</p>
+       <p>&#8377; 1000000</p>
+    </div>
+</div>
+<div class="image-container">
+    <div class="image">
+        <img src="./images/jaguar.jfif" alt="">
+    </div>
+
+<div class="cars-data">
+   <p>Jaguar</p>
+   <p>&#8377; 1066600</p>
+</div>
+</div>
+<div class="image-container">
+    <div class="image">
+        <img src="./images/volvo.jfif" alt="">
+    </div>
+
+<div class="cars-data">
+   <p>Volvo</p>
+   <p>&#8377; 900000</p>
+</div>
+</div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Validator</title>
+    <script>
+        function validateName(){
+ var name = document.getElementById("input-name").value;
+ 
+ if(name.length === 0){
+    document.getElementById("msg").innerHTML="Name Cannot be Empty";
+    
+ }
+ else if( name.length<=3){
+    document.getElementById("msg").innerHTML="Name Cannot be less than 3 Chracters";
+    document.getElementById("input-name").focus();
+ }
+ else{
+    document.getElementById("msg").innerHTML="Username is Valid "+name;
+ }
+
+ 
+ 
+}
+    </script>
+</head>
+<body>
+   <span>Enter Your Name</span> 
+   <input type="text" id="input-name" minlength="3">
+   <input type="button" value ="Validate" onclick="validateName();">
+   <p id="msg"></p>
+</body>
+</html>

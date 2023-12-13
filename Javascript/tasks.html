@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px ;
+            height: 200px;
+            background-color: aqua;
+            animation-name: first_div;
+            animation-duration: 5s;
+            animation-delay: 3s;
+            animation-fill-mode: both;
+            animation-iteration-count: infinite;
+            animation: name duration timing-function delay iteration-count direction fill-mode;
+
+        }
+
+        @keyframes first_div{
+            from{background-color: red;}
+            to{background-color: purple;}
+        }
+        div{
+
+        }
+    </style>
+    <script>
+        var arr = ["Somesh", "Sumat", "Pratiksha", "Sameer", "krunal Kharat", "JOJO", "Popat Lal", "Santa Singh", "manasi", "Lalit", "Shivani", "Priti"]
+        // arr.forEach((name)=>{
+
+        //     if(name.length>=7){
+
+        //         console.log(name);
+        //     }
+        // })
+        arr.forEach((name) => {
+
+            if (name.charAt(0) === 'm' || name.charAt(0) === 'k' || name.charAt(0) === 'L') {
+
+                console.log(name);
+            }
+        })
+    </script>
+</head>
+
+<body>
+<div>
+    <h3>Hello Cybage</h3>
+</div>
+</body>
+
+</html>

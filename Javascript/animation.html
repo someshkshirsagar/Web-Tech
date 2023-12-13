@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    function getColor(){
+        var fromColor= document.getElementById("from-color").value;
+    var toColor= document.getElementById("to-color").value;
+    console.log(fromColor);
+console.log(toColor);
+var styleSheetObj=document.styleSheets[0];
+var csRuleDetails=styleSheetObj.cssRules;
+csRuleDetails[2].deleteRule("from")
+csRuleDetails[2].appendRule('from {background-color:' +fromColor + '};')
+csRuleDetails[2].deleteRule("to");
+csRuleDetails[2].appendRule('to {background-color:' +toColor + '};')
+
+var result=document.getElementById("container");
+result.className="animation1";
+
+    }
+    
+    </script>
+    <style>
+        #container{
+
+
+            width: 200px;
+            height: 200px;
+          border: 2px solid black;
+        
+        }
+        .animation1{
+            animation: temp 2s 
+        }
+        @keyframes temp{
+            from{
+                background-color: red;
+            }
+          to{
+            background-color: yellow;
+          }
+        }
+    </style>
+</head>
+<body>
+    From<input type="color" id="from-color">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  To  <input type="color" id="to-color">
+  <br>
+  <br>
+  <div id="container" ></div>
+  <input type="button" name="" id="" value="Apply" onclick="getColor();">
+</body>
+</html>
